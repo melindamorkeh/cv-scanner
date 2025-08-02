@@ -1,0 +1,26 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  deploy_frontend:
+    runs-on: ubuntu-latest
+    name: "Deploy to Netlify"
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install and build frontend
+        run: |
+          cd frontend
+          yarn install
+          yarn build
+
+      - name: Deploy to Netlify
+        run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
