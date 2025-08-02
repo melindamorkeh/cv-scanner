@@ -1,0 +1,46 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  deploy_frontend:
+    runs-on: ubuntu-latest
+    name: "Deploy to Netlify"
+    environment: production
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install and build frontend
+        run: |
+          cd frontend
+          yarn install
+          yarn build
+
+      - name: Deploy to Netlify
+        run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
+
+
+  # deploy_backend:
+  #   runs-on: ubuntu-latest
+  #   name: "Deploy to Render"
+  #   environment: production
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v4
+
+  #     - name: Deploy to Render
+  #       uses: JorgeLNJunior/render-deploy@v1.4.5
+  #       with:
+  #         service_id: ${{ secrets.RENDER_SERVICE_ID }}
+  #         api_key: ${{ secrets.RENDER_API_KEY }}
+  #         clear_cache: true
+  #         wait_deploy: true
+  #         github_deployment: true
+  #         deployment_environment: "production"
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
