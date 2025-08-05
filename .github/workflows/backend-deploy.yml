@@ -27,6 +27,7 @@ jobs:
       - name: Install dependencies and run tests
         run: |
           cd backend
+          uv venv
           uv pip install -r requirements.lock
           uv run python manage.py test
 
