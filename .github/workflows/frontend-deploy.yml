@@ -19,8 +19,8 @@ jobs:
       - name: Install and build frontend
         run: |
           cd frontend
-          yarn install
-          yarn build
+          pnpm install
+          pnpm build
 
       - name: Deploy to Netlify
         run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
