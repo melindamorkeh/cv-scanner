@@ -1,11 +1,17 @@
+# Scanly
+
+A CV/resume scanning application.
+
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (v22+ recommended)
-- [Yarn](https://classic.yarnpkg.com/en/docs/install) (v1.22+ recommended)
+- [Node.js](https://nodejs.org/) (v22.19.0 recommended)
+- [Pnpm](https://classic.yarnpkg.com/en/docs/install) (v10.15.0 recommended)
 - [Python](https://www.python.org/downloads/) (v3.13+ recommended)
-- [uv](https://github.com/astral-sh/uv)
+- [uv](https://github.com/astral-sh/uv) (v0.8.14+ recommended)
 
-## Running the Backend (Django)
+## Local Development Setup
+
+### Backend Setup (Django)
 
 ```bash
 cd backend
@@ -30,17 +36,17 @@ python manage.py runserver
 http://127.0.0.1:8000/
 ```
 
-## Running the Frontend (React)
+## Frontend Setup (React)
 
 ```bash
 cd frontend
 
-# Install packages (only once)
-yarn install
+# Install dependencies
+pnpm install
 
-# Start React dev server
-yarn start
+# Start development server
+pnpm dev
 
 # Frontend will be live at
-http://localhost:3000/
+http://localhost:5173/
 ```
