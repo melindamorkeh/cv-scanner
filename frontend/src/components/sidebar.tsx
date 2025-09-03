@@ -3,14 +3,6 @@
 import * as React from "react"
 import {
   Archive,
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
   Settings2,
   SquareTerminal,
   Upload,
@@ -22,7 +14,6 @@ import {
   Sidebar as SidebarPrimitive,
   SidebarContent,
   SidebarFooter,
-  SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
 
