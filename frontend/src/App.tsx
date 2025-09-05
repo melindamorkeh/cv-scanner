@@ -1,20 +1,37 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Sidebar } from "@/components/ui/sidebar"
+import { AuthProvider } from "./context/AuthContext";
+
+import HeroPage from "@/Pages/HeroPage";
+import LoginPage from "@/Pages/LoginPage";
+
+// The following pages will be protected routed
+// import DashboardPage from "@/Pages/DashboardPage";
+// import UploadPage from "@/Pages/UploadPage";
+// import JobPostingsPage from "@/Pages/JobPostings";
+// import SettingsPage from "@/Pages/SettingsPage";
+
+// Importing components
+import Navbar from "./components/navbar";
 
 function App() {
   return (
     <Router>
-      <div className="flex min-h-screen">
-        {/* Sidebar */}
-        <Sidebar />
-
+      <div className="min-h-screen">
+        {/* Navbar */}
+        <Navbar />
         {/* Main Content Area */}
-        <div className = "flex-1 p-6">
+        <div className="flex-1">
           <Routes>
-            <Route path="/" element={<div>Dashboard Page</div>} />
-            <Route path="/upload" element={<div>Upload CV Page</div>} />
-            <Route path="/job-postings" element={<div>Job Postings Page</div>} />
-            <Route path="/settings" element={<div>Settings Page</div>} />
+            {/* Public routes */}
+            <Route path="/" element={<HeroPage />} />
+            <Route path="/login" element={<LoginPage />} />
+
+            {/* Protected routes: not currently implemented as protected for development */}
+            {/* <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/upload" element={<UploadPage />} />
+            <Route path="/job-postings" element={<JobPostingsPage />} />
+            <Route path="/settings" element={<SettingsPage />} /> */}
+
           </Routes>
         </div>
       </div>
