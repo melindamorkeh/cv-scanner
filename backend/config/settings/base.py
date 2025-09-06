@@ -140,3 +140,10 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema", # added this
 }
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'CV Scanner API',
+    'DESCRIPTION': 'API documentation for my Django project',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,  # optional
+}
