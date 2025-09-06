@@ -5,7 +5,6 @@ djangorestframework
 djangorestframework-simplejwt
 gunicorn
 psycopg2-binary
-python-dotenv
 pytz
 sqlparse
 whitenoise
