@@ -21,10 +21,10 @@ uv venv
 source .venv/bin/activate         # Windows: .venv\Scripts\activate
 
 # Install dependencies
-uv pip install -r requirements.lock
+uv pip install -r requirements.txt
 
 # Set environment variables
-cp .env.example .env              # Then add your SECRET_KEY inside .env
+export DJANGO_SETTINGS_MODULE=config.settings.development # or production
 
 # Run initial migrations
 python manage.py migrate
