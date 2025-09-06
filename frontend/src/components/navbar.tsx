@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { useNavigate } from "react-router-dom"
+import { ThemeToggle } from "./theme-toggle"
 
 export default function Navbar() {
     const navigate = useNavigate()
@@ -18,13 +19,16 @@ export default function Navbar() {
                 </a>
                 </div>
                 <div className="flex-1 flex justify-end">
-                <div className="hidden sm:flex sm:items-center">
+                <div className="flex items-center space-x-2">
+                <ThemeToggle />
+                <div className="hidden sm:block">
                 <Button
                     onClick={() => navigate("/login")}
                     className="font-medium text-base rounded-full"
                 >
                     Login
                 </Button>
+                </div>
                 </div>
                 </div>
             </div>
