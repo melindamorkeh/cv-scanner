@@ -1,4 +1,4 @@
-import Sidebar from "@/components/sidebar";
+// import Sidebar from "@/components/sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import UploadCVCard from "@/components/upload-cv-card";
 import { SiteHeader } from "@/components/site-header";
