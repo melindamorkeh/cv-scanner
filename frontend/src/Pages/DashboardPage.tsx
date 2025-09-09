@@ -1,4 +1,4 @@
-import Sidebar from "@/components/sidebar";
+// import Sidebar from "@/components/sidebar";
 import {
     SidebarInset,
     SidebarProvider,
@@ -7,9 +7,7 @@ import { ChartAreaInteractive } from "@/components/chart-area-interactive";
 import { ChartPieLegend } from "@/components/chart-pie-legend";
 import {
     Card,
-    CardAction,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
