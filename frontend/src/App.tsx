@@ -4,7 +4,7 @@ import LoginPage from "@/Pages/LoginPage";
 
 // The following pages will be protected routed
 import DashboardPage from "@/Pages/DashboardPage";
-// import UploadPage from "@/Pages/UploadPage";
+import UploadCVPage from "@/Pages/UploadPage";
 // import JobPostingsPage from "@/Pages/JobPostings";
 // import SettingsPage from "@/Pages/SettingsPage";
 
@@ -29,6 +29,8 @@ function App() {
 
               {/* Protected routes: not currently implemented as protected for development */}
               <Route path="/dashboard" element={<DashboardPage/>} />
+              <Route path="/upload-cv" element={<UploadCVPage />} />
+              {/* <Route path="/job-postings" element={<JobPostingsPage />} /> */}
 
             </Routes>
           </div>

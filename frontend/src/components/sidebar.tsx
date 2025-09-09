@@ -22,12 +22,12 @@ const data = {
   user: {
     name: "Test User",
     email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: "", // Removed missing avatar image
   },
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: SquareTerminal,
       isActive: true,
     },

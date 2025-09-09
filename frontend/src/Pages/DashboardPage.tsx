@@ -1,6 +1,9 @@
 import Sidebar from "@/components/sidebar";
+import {
+    SidebarInset,
+    SidebarProvider,
+} from "@/components/ui/sidebar"
 import { ChartAreaInteractive } from "@/components/chart-area-interactive";
-import { DataTable } from "@/components/data-table";
 import { ChartPieLegend } from "@/components/chart-pie-legend";
 import {
     Card,
@@ -9,14 +12,10 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-  } from "@/components/ui/card";
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionCards } from "@/components/section-cards";
 import { SiteHeader } from "@/components/site-header";
-import {
-    SidebarInset,
-    SidebarProvider,
-} from "@/components/ui/sidebar"
 
 import { useNavigate } from "react-router-dom";
 
