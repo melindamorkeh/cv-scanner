@@ -10,6 +10,10 @@ class RegisterView(generics.CreateAPIView):
     permission_classes = (permissions.AllowAny,)
     serializer_class = RegisterSerializer
     
+class LoginView(generics.GenericAPIView):
+    permission_classes = (permissions.AllowAny,)
+    serializer_class = TokenObtainPairSerializer
+    
 class MeView(generics.RetrieveAPIView):
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = UserSerializer
