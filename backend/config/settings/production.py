@@ -1,0 +1,26 @@
+from .base import *
+
+DEBUG = False
+
+# Allowed hosts (production domain)
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["yourdomain.com"])
+
+MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware', # added this
+]
+
+# Security settings
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = 3600
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# Production database (from environment)
+DATABASES = {
+    "default": env.db("DATABASE_URL")
+}
+
+# CORS only your frontend domain
+CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=["https://yourfrontend.com"])
