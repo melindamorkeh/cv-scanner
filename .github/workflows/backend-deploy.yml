@@ -28,7 +28,7 @@ jobs:
         run: |
           cd backend
           uv venv
-          uv pip install -r requirements.lock
+          uv pip install -r requirements.txt
           uv run python manage.py test
 
   deploy:
