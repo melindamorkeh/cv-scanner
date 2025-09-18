@@ -1,5 +1,11 @@
 from .base import *
 
+# Absolute path where collectstatic will store files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# URL to serve static files
+STATIC_URL = '/static/'
+
 DEBUG = False
 
 # Allowed hosts (production domain)
