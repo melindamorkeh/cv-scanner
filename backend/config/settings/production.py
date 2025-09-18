@@ -7,7 +7,7 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["yourdomain.com"])
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware', # added this
-]
+] + MIDDLEWARE
 
 # Security settings
 CSRF_COOKIE_SECURE = True
