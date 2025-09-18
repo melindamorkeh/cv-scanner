@@ -9,7 +9,7 @@ STATIC_URL = '/static/'
 DEBUG = False
 
 # Allowed hosts (production domain)
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["yourdomain.com"])
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["https://scanly-4i39.onrender.com"])
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware', # added this
