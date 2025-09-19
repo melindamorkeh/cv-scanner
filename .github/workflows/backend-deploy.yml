@@ -10,6 +10,9 @@ on:
 jobs:
   deploy_backend:
     runs-on: ubuntu-latest
+    env:
+      DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
     name: "Deploy to Render"
     environment: production
     steps:
@@ -28,7 +31,7 @@ jobs:
         run: |
           cd backend
           uv venv
-          uv pip install -r requirements.lock
+          uv pip install -r requirements.txt
           uv run python manage.py test
 
   deploy:
