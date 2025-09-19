@@ -37,10 +37,16 @@ class LoginSerializer(serializers.ModelSerializer):
         username = attrs.get('username')
         password = attrs.get('password')
         user = authenticate(username=username, password=password)
-        if (not user):
+        if not user:
             raise serializers.ValidationError({"detail": "Invalid credentials."})
         attrs['user'] = user
         return attrs
+
+# class ForgotPasswordSerializer(serializers.ModelSerializer):
+        
+# class ResetPasswordSerializer(serializers.ModelSerializer):
+
+# class LogoutSerializer(serializers.ModelSerializer):
     
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
