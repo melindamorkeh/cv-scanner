@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-export default function LoginForm({
+export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
@@ -37,7 +37,7 @@ export default function LoginForm({
               <Input
                 id="email"
                 type="email"
-                placeholder="user@example.com"
+                placeholder="melinda@example.com"
                 required
               />
             </div>
