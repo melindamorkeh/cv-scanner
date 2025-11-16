@@ -1,15 +1,10 @@
-import { LoginForm } from "@/components/login-form"
+import AppRouter from "@/routes/AppRouter"
+import { ThemeProvider } from "@/components/theme-provider"
 
-function App() {
+export default function App() {
   return (
-    <>
-      <div className="bg-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
-        <div className="w-full max-w-sm">
-          <LoginForm />
-        </div>
-      </div>
-    </>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <AppRouter />
+    </ThemeProvider>
   )
 }
-
-export default App
